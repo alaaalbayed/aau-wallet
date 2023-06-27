@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Dashboard.css" type="text/css">
+    <link rel="shortcut icon" href="Images/favicon.ico" type="text/css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div id="Top">
+            <a href="newmember.html"><img id="AAUPP" src="Images/AAU WALLET.png"></a>
+            <a href="AAU WALLET.HTML"><button id="SingOut">Sing Out</button></a>
+            <a href="setting.html"><button id="setting"><i class="fa fa-gear"></i></button></a>
+            <div><a href="newmember.html"><button class="bleft active">Dashboard</button></a>
+                <a href="wallet.html"><button class="bleft">wallet</button></a>
+            </div>
+        </div>
+        <div>
+            <h1 id="welcome"></h1>
+        </div>
+        <div id="details">
+            <a class="balanctext" href="wallet.html"><h3>balance</h3></a>
+            <span id="money" class="currency_primary"></span>
+            <span class="status">Available</span><br>
+            <a href="#bsm"><button id="bsm">Send Money</button></a>
+            <a href="wallet.html"><button id="bsm1">Add Money</button></a>
+            
+        </div>
+        <div id="sendmoneyform">
+            <form method="post">
+            <a id="h3money" href="newmember.html"><h1>Send money</h1></a>
+            <input id="email" class="sendmoney" type="email" placeholder="Enter Your Email" required><br>
+            <input id ="amount" class="sendmoney" type="text" placeholder="Enter Your amount" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required><br>
+            
+                <button id="bsm" type="button" onclick="SendMoney()" hidden>transfer</button>
+                <div>
+                    <h3 id="error" style="color: red; text-decoration: none;"></h3>
+                </div>
+           
+        </form>
+        </div>
+        </header>
+        <script>
+            var formatter = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            });
+            var passname  = localStorage.getItem("passname");
+            var name = document.getElementById("welcome").innerHTML="Good morning, "+passname;
+            var x = 0;
+            var money = formatter.format(0.00);
+            var passmoney = localStorage.setItem("passmoney",money);
+            var PrimaryMoney = document.getElementById("money").innerHTML = money;
+            //var passaddmoney = localStorage.getItem("passaddmoney");
+            //var addmoney = document.getElementById("money").innerHTML = formatter.format(passaddmoney);
+            document.getElementById("email").disabled  = true;
+            document.getElementById("amount").disabled  = true;
+             function SendMoney(){
+                alert("Please add a credit card to Send money");
+             
+            //  var amount = document.getElementById("amount").value;
+            //  var convert = PrimaryMoney.replace(/[^0-9.]/g, '');
+            //  var transaction = formatter.format(convert - amount);
+            //  var end = document.getElementById("money").innerHTML = transaction;
+ 
+
+            //  if(amount > convert){
+            //     document.getElementById("error").innerHTML = "no enogth money"
+            //     document.getElementById("money").innerHTML = formatter.format(convert);
+            //  }
+            //  else if (amount = null){
+            //     document.getElementById("money").innerHTML = formatter.format(convert);
+            //  }
+            }
+            
+            
+        </script>
+        <footer>
+            <div class="container">
+                <p>© AAU WALLET 2021</p>
+            </div>
+        </footer>
+    
+</body>
+</html>

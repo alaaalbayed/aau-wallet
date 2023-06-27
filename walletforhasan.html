@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Dashboard.css" type="text/css">
+    <link rel="shortcut icon" href="Images/favicon.ico" type="text/css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+#div1{
+text-align: center;
+border: solid 8px #f5f7fa ;
+width: 690px;
+height: 717px;
+position:absolute;
+margin-left: 500px;
+background-color: white;
+
+}
+
+#img1{
+    height: 100px;
+    z-index: 1;
+}
+
+#img2{
+
+
+z-index: 2;
+margin-top: 50px;
+width :90px;
+height:90px;
+margin-left: 150px;
+
+}
+body{
+
+    background-color: #f5f7fa;
+}
+#div2{
+   text-align: center;
+border: solid 8px #f5f7fa ;
+
+position:absolute;
+margin-left: 20px;
+background-color: #f5f7fa;
+text-align: center;
+
+}
+#a1{
+    font-size: 25px;
+    margin-left:150px;
+    text-decoration: none;
+    color: #0070ba;
+}
+#a1:hover{
+    color:black;
+}
+#img3{
+    height: 100px;
+    margin-left:150px;
+    margin-top: 50px;;
+}
+footer {
+    background-color: #383838;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 55%;
+}
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+#buttonaddmoney{
+    margin-left: 100px;
+     
+}
+#textaddmoney{
+    margin-right: 215px;
+    padding: 8px;
+    border-radius: 20px;
+    
+}
+#img2{
+
+
+z-index: 2;
+margin-top: 50px;
+width :200px;
+height:200px;
+margin-left: 150px;
+
+}
+#a2{
+    font-size: 25px;
+    margin-left:150px;
+    text-decoration: none;
+    color: #0070ba;
+}
+#a2:hover{
+    color:black;
+}
+#a3{
+    font-size: 25px;
+    margin-left:150px;
+    text-decoration: none;
+    color: #0070ba;
+}
+#a3:hover{
+    color:black;
+}
+
+
+
+
+</style>
+</head>
+<body>
+    <header class="header">
+        <div id="Top">
+            <a href="dashboard2.html"><img id="AAUPP" src="Images/AAU WALLET.png"></a>
+            <a href="AAU WALLET.HTML"><button id="SingOut">Sing Out</button></a>
+            <a href="settingforhasan.html"><button id="setting"><i class="fa fa-gear"></i></button></a>
+
+       
+            <div>
+                <a href="dashboard2.html"><button class="bleft">Dashboard</button></a>
+                <a href="walletforhasan.html"><button class="bleft active">wallet</button></a>
+            </div>
+            
+            <div id="div1" >
+                <img src="Images/AAU.jpg" id="img1" >
+
+                <a class="balanctext" href="dashboard2.html"><h3> AAU balance</h3></a>
+                <span id="money" class="currency_primary"></span>
+                <span class="status">Available</span><br>
+                <button type="button" id="buttonaddmoney" onclick="AddMoney()">Add Money</button>
+                <input id="textaddmoney" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="4">
+                <hr>
+                <h3 class="status" >Use your balance to shop, send payments, or transfer it to your bank account.</h3>
+                <hr>
+                <h2 class="balanctext" >Preferred when paying online</h2><br>
+                <h3 class="status" >We’ll use your available balance when you shop online or send payments for goods and services.
+                    If you don’t have enough funds in your balance, we’ll ask you to pick another payment method at checkout.</h3>
+            </div>
+        </div>
+        <div id="div2" >
+            <a href ="walletforhasan.html" > <img src ="Images/AAU.jpg" id="img3" ></a>
+         <h2><a href = "walletforhasan.html" id="a1" > AAU balance</a></h2> 
+         <a href ="walletwithvisa.html" > <img src ="Images/credit-card-glyph-black-icon-png_293020.jpg" id="img2" ></a>
+         <h2><a href = "walletforhasan.html" id="a2">5244 23** **** ****</a></h2>
+         <h2><a href = "walletforhasan.html" id="a3">03/27</a></h2> 
+         <div>
+        </div>
+        </div>
+
+
+       
+        </header>
+
+        <script>
+            
+            var button = document.getElementById("buttonaddmoney");
+            var text = document.getElementById("textaddmoney");
+            // var passbutton = localStorage.setItem("passbutton",button);
+            // var passtext = localStorage.setItem("passtext",text);
+            // button.style.visibility = "hidden";
+            // text.style.visibility = "hidden";
+            var formatter = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            });
+            var passmoney = localStorage.getItem("passmoney3");
+            var money = document.getElementById("money").innerHTML = passmoney;
+            var passmoneynew = localStorage.getItem("passmoneyhasan");
+            var addmoney= 0;
+            var moneynew = document.getElementById("money").innerHTML = passmoneynew;
+            function AddMoney(){
+                var convert = parseInt(passmoney.replace(/[^0-9.]/g, ''));
+                var input = text.value;
+                var input2 = parseInt(input);
+                addmoney += input2 + convert;
+                var x = document.getElementById("money").innerHTML = formatter.format(addmoney);
+                var passaddmoney = localStorage.setItem("passaddmoney3",addmoney);
+        }
+        
+        </script>
+        <footer>
+            <div class="container">
+                <p>© AAU WALLET 2021</p>
+            </div>
+        </footer>
+    
+</body>
+</html>

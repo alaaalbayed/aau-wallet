@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Dashboard.css" type="text/css">
+    <link rel="shortcut icon" href="Images/favicon.ico" type="text/css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+#div1{
+display: block;
+text-align: center;
+width:510px;
+background-color:rgb(255, 255, 255);
+border-radius:20px;
+padding:10px;
+margin-left:33%;
+color: #1212bd;
+height:730px ;
+padding:10px;
+font-family: Arial, Helvetica, sans-serif;
+font-size:12px ;
+margin-top: 150px;
+
+}
+#div2{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+    background: #1212bd;
+    padding:1px;
+ 
+}
+body{
+background-color: #f5f7fa;
+}
+
+input[type=email],input[type=password],select,input[type=text]{
+width:500px;
+
+border: solid 1px #ccc;
+box-sizing:border-box;
+padding : 12px ;
+border-radius:20px;
+margin: 8px 10px;
+}
+
+input[type=button]{
+background-color:#1212bd ;
+width:500px;
+display:block;
+border: solid 1px #ccc;
+box-sizing:border-box;
+padding : 20px ;
+border-radius:20px;
+margin: 8px 10px;
+color: white;
+font-weight: bolder;
+}
+
+
+input[type=text]:hover{
+box-shadow: 0px 0px 20px #1212bd;
+}
+input[type=password]:hover{
+box-shadow: 0px 0px 20px #1212bd;
+}
+input[type=email]:hover{
+box-shadow: 0px 0px 20px #1212bd;
+}
+input[type=button]:hover{
+box-shadow: 0px 0px 20px #1212bd;
+}
+#img1{
+position: absolute;
+width:400px ;
+margin-left: 35%;
+margin-top: -20px;
+}
+
+#hh{
+   position:absolute; 
+  margin-top: 150px;
+  margin-left: 150px;
+  color: #1212bd;
+}
+footer {
+    background-color: #383838;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 70%;
+}
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+</style>
+
+</head>
+<body>
+    <header class="header">
+        <div id="Top">
+            <a href="newmember.html"><img id="AAUPP" src="Images/AAU WALLET.png"></a>
+            <a href="AAU WALLET.HTML"><button id="SingOut">Sing Out</button></a>
+            <a href="setting.html"><button id="setting"><i class="fa fa-gear"></i></button></a>
+            <div>
+                <a href="newmember.html"><button class="bleft">Dashboard</button></a>
+                <a href="wallet.html"><button class="bleft">wallet</button></a>
+                
+            </div>
+            <img src="Images/AAU WALLET.png" id="img1" >
+
+            
+            
+            <div id="div1" >
+                
+                    <div id = "div2"  >
+                        <h1>Account setting</h1>
+                        
+                    </div>
+                    <form action="post" >
+                <h2>First Name</h2>
+                <input type="text" value="" id="f1"  >
+                <h2>Last Name</h2>
+                <input type="text" value="" id="l1" >
+                <h2>Email</h2>
+                <input type="email" value="" id="e1" >
+                <h2>Password</h2>
+                <input type="text" value="" id="p1" >
+                <h2>Phone number</h2>
+                <input type="text" value="0466666666" id="phone"><br><br>
+                
+                <input type="button" value="Update">
+                     </form>
+
+
+            </div>
+
+
+        </header>
+        <script>
+           document.getElementById("f1").disabled=true;
+           document.getElementById("l1").disabled=true;
+           document.getElementById("e1").disabled=true;
+           document.getElementById("p1").disabled=true;
+           document.getElementById("phone").disabled=true;
+           var fname = localStorage.getItem("passname");
+           var lname = localStorage.getItem("passlname");
+           var email1 =localStorage.getItem("passemail");
+           var pass1 =localStorage.getItem("passpassword");
+           document.getElementById("f1").value=fname;
+           document.getElementById("l1").value=lname;
+           document.getElementById("e1").value=email1;
+           document.getElementById("p1").value=pass1;
+
+        </script>
+        <footer>
+            <div class="container">
+                <p>© AAU WALLET 2021</p>
+            </div>
+        </footer>
+    
+</body>
+</html>

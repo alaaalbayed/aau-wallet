@@ -1,0 +1,193 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+#Top {
+    height: 90px;
+    background:#383838;
+    padding: 0 30PX;
+}
+#AAUPP{
+    height: 80px;
+    float: left;
+    margin-top: 3.5px;
+
+}
+#SingOut{
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 12px 15px;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    line-height: 15px;
+    float: right;
+    margin: 25px;
+}
+.bleft{
+    color: white;
+    width: 150px;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 25px;
+    padding: 10px 12px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 25px;
+ 
+}
+.active,.bleft:hover {
+    background-color: #072cff;
+    color: white;
+
+  }
+.bleft2{
+    color: white;
+    width: 30px;
+    line-height: 1.15;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 25px;
+    padding: 10px 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 25px;
+}
+#setting{
+    color:white;
+    font-size:24px;
+    float: right;
+    background-color: transparent;
+    border-color: transparent;
+    margin: 22px;
+    margin-right: -25px;
+    padding: 9px;
+    cursor: pointer;
+}
+#welcome{
+    font-family: PayPalSansBig-Light,Helvetica Neue,Arial,sans-serif;
+    font-size: 1.875rem;
+    padding: 20px 150px;
+    font-weight: 700;
+    display: block;
+}
+#details{
+    width: 30%;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 1px 0 rgb(0 0 0 / 10%);
+    height: 100%;
+    margin-left: 140px;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    position: relative;
+    text-align: left;
+}
+.balanctext{
+    font-family: PayPalSansBig-Medium,Helvetica Neue,Arial,sans-serif;
+    font-size: 20px;
+    line-height: 1px;
+    font-weight: 500;
+    color: #0070ba;
+    text-decoration: none;
+}
+.currency_primary{
+    font-family: PayPalSansBig-Light,Helvetica Neue,Arial,sans-serif;
+    color: black;
+    font-size: 35px;
+    line-height: 50px;
+    font-weight: 500;
+
+}
+.status{
+    color: #687173;
+    display: block;
+}
+#bsm{
+    display: inline-block;
+    color: #0070ba;
+    background-color: transparent;
+    border-color: #0070ba;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+#bsm:hover{
+    border-color: black;
+
+}
+footer {
+    background-color: #383838;
+    color: #fff;
+    font-size: 14px;
+}
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+#sendmoneyform{
+    width: 250px;
+    margin: 5px 140px;
+    padding: 50px 100px;
+    border: 1px solid #eaeced;
+    border-radius: 25px;
+    text-align: center;
+}
+.sendmoney{
+    width:350px;
+    display:block;
+    padding: 12px 20px;
+    border: solid 1px #ccc;
+    box-sizing:border-box;
+    border-radius:20px;
+    margin: 5px -50px;
+    height:50px;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+#h3money{
+    text-decoration: none;
+    color: #0070ba;
+    margin: 10px;
+    
+}
+#bsm1{
+
+    color: #0070ba;
+    background-color: transparent;
+    border-color: #0070ba;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 30px;
+
+}
+#bsm1:hover{
+    border-color: black;
+
+}
+#buttonaddmoney{
+    color: #0070ba;
+    background-color: transparent;
+    border-color: #0070ba;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    
+
+}
+#buttonaddmoney:hover{
+    border-color: black;
+
+}
+

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="Images/favicon.ico" type="text/css" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+         body{
+            background-color: #f2f2f2;
+;
+            background-size: cover;
+            background-repeat: no-repeat;
+         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         text-align: center;
+
+         }
+
+#AAUPP{
+    height: 80px;
+    margin-left:32% ;
+    text-align:center;
+    
+}
+
+
+
+
+#div1{
+width:500px;
+background-color:rgb(255, 255, 255);
+border-radius:20px;
+padding:10px;
+margin-left: 33%;
+font-size: 15px;
+font-weight: 600;
+text-align: left;
+}
+input[type=email],input[type=password]{
+width:500px;
+display:block;
+border: solid 1px #ccc;
+box-sizing:border-box;
+padding : 12px 20px;
+border-radius:20px;
+margin: 8px 0;
+height:50px ;
+}
+input[type=button]{
+background-color:#1212bd;
+width:500px;
+display:block;
+box-sizing:border-box;
+padding : 12px 20px;
+border-radius:20px;
+margin: 8px 0;
+color: white;
+border-radius:50px; 
+cursor:pointer;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size:15px ;
+height:50px ;
+
+
+}
+
+input[type=button]:hover{
+background-color:#71a2ec;
+}
+
+
+
+input[type=password]:hover{
+box-shadow: 0px 0px 20px #1212bd;
+}
+input[type=email]:hover{
+box-shadow: 0px 0px 20px #1212bd;
+}
+
+#div2{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+    background: #1212bd;
+    padding:1px;
+ 
+}
+#imgg{
+height:200px;
+}
+p{
+    text-align: center;
+}
+input[type=checkbox]{
+text-align: center;
+}
+#checkbox{
+margin-right: 350px;
+}
+#error{
+    color: red;
+    font-size: 15px;
+    margin: 20px 175px;
+    font-weight: bold;
+}
+
+
+
+     </style>
+   </head>
+<body>
+    <img src="Images/AAU WALLET.png" id="imgg" >
+    <div id="div1" >
+        
+    <div id = "div2"  >
+        <h1>Get Started</h1>
+        
+    </div>
+        <form action="#" method="post">
+        
+          
+        
+        <input id ="jsemail" type ="email" name="" placeholder="Enter Your Email" required>
+        
+       
+        <input id ="jspass" type ="password" name="Fpass" placeholder="Password" required>
+
+     <p id="checkbox"><input  type ="checkbox" name=""> Remember me</p> 
+
+        <input type="button" value="Login" onclick="Login()">
+        <h4 id="error"></h4>
+        <p>  Not A member? <a href="register.html" >Sign Up</a></p>
+        </form>
+        <script>
+            function Login(){
+            var Passemail = localStorage.getItem("passemail");
+            var PassPassword = localStorage.getItem("passpassword");
+
+
+            var email=document.getElementById("jsemail").value;
+            var password=document.getElementById("jspass").value;
+            if(email=="aizen@gmail.com" && password=="aizen"){
+            window.location.href = "dashboard2.html";
+            }
+            else if (email=="hasan@gmail.com" && password=="hasan"){
+                window.location.href = "dashboard1.html";
+            }
+            else if (email=="alaa@gmail.com" && password=="alaa"){
+                window.location.href = "dashboard.html";
+            }
+            else if (email== Passemail && password == PassPassword){
+                window.location.href = "newmember.html";
+            }
+            else if (email== "" && password == ""){
+                document.getElementById("error").innerHTML = "invaild information";
+            }
+            else{
+            document.getElementById("error").innerHTML = "invaild information";
+            }
+        }
+        </script>
+</body>
+</html>

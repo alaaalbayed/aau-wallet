@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+     <link rel="shortcut icon" href="Images/favicon.ico" type="text/css" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+         body{
+            background-color: #f2f2f2;
+;
+            background-size: cover;
+            background-repeat: no-repeat;
+         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         text-align: center;
+
+         }
+
+#AAUPP{
+    height: 80px;
+    margin-left:32% ;
+    text-align:center;
+    
+}
+
+#clable{
+color: #1212bd;
+}
+
+
+#div1{
+width:500px;
+background-color:rgb(255, 255, 255);
+border-radius:20px;
+padding:10px;
+margin-left: 33%;
+font-size: 15px;
+font-weight: 600;
+text-align: left;
+}
+input[type=email],input[type=password],select,input[type=text],input[type=date]{
+width:500px;
+display:block;
+border: solid 1px #ccc;
+box-sizing:border-box;
+padding : 12px 20px;
+border-radius:20px;
+margin: 8px 0;
+}
+input[type=button]{
+background-color:#1212bd;
+width:500px;
+display:block;
+box-sizing:border-box;
+padding : 12px 20px;
+border-radius:20px;
+margin: 8px 0;
+color: white;
+border-radius:50px; 
+cursor:pointer;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size:15px ;
+
+
+}
+
+input[type=button]:hover{
+background-color:#71a2ec;
+}
+
+select:hover{
+box-shadow: 0px 0px 20px #1212bd;
+}
+input[type=text]:hover{
+box-shadow: 0px 0px 20px #1212bd;
+}
+input[type=password]:hover{
+box-shadow: 0px 0px 20px #1212bd;
+}
+input[type=email]:hover{
+box-shadow: 0px 0px 20px #1212bd;
+}
+input[type=date]:hover{
+box-shadow: 0px 0px 20px #1212bd;
+}
+#div2{
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+    background: #1212bd;
+    padding: 32px;
+ 
+}
+#imgg{
+height: 189px;
+}
+p{
+    text-align: center;
+}
+input[type=checkbox]{
+text-align: center;
+}
+#checkbox{
+margin-right: 360px;
+}
+#error{
+    color: red;
+    font-size: 15px;
+    margin: 20px 160px;
+    font-weight: bold;
+}
+
+
+     </style>
+   </head>
+<body>
+    <img src="Images/AAU WALLET.png" id="imgg" >
+    <div id="div1">
+        
+    <div id = "div2">
+        <h1>Create your account</h1>
+        <h3>its quick and easy</h3>
+    </div>
+        <form id="form" action="" method="post">
+        <input id="fname" type ="text" name="" placeholder="First Name" required>
+        <input id="lname" type ="text" name="" placeholder="Last Name" required>
+        <input id ="email" type ="email" name="" placeholder="Enter Your Email" required>
+        <input id ="pass" type ="password" name="pass" placeholder="Password" required>
+        <input id ="cpass" type ="password" name="cpass" placeholder="Confirm Password" required>
+        <p id="checkbox"><input type ="checkbox" name="" > Remember me</p>
+        <input type="button" value="Create Your Account" onclick="password()">
+        <p id="error"></p>
+        <p>  Already have a account ? <a href="Login.html" >Login</a></p>
+        </form>
+
+        <script>
+
+            function password(){
+                var empty="";
+                var fname = document.getElementById("fname").value;
+                var lname = document.getElementById("lname").value;
+                var email = document.getElementById("email").value;
+                var pass = document.getElementById("pass").value;
+                var cpass = document.getElementById("cpass").value;
+                var Passname =  localStorage.setItem("passname",fname);
+                var Passlname =  localStorage.setItem("passlname",lname);
+                var Passemail =  localStorage.setItem("passemail",email);
+                var PassPassword =  localStorage.setItem("passpassword",pass);
+                
+
+                if (fname != empty && lname != empty && email != empty && pass != empty && cpass != empty){
+                
+                if (pass != cpass){
+                    document.getElementById("error").innerHTML = "Password do not match";
+                }
+                else {
+                    window.location.href = "login.html";
+                }
+             }
+                else {
+                document.getElementById("error").innerHTML = "Please fill all information";
+            }
+            
+        }
+
+        </script>
+</body>
+</html>
